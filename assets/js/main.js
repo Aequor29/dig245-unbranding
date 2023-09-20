@@ -21,7 +21,10 @@ document.addEventListener("DOMContentLoaded", function() {
   
     const explodeImg = createImageElement("explode", "assets/img/explode.png");
     stateDiv.appendChild(explodeImg);
-  
+    
+    let text = document.querySelector('.textElement');
+    text.textContent = "Stunning Meets Explosive";
+
     setTimeout(() => {
       smallFlameImg.classList.add('active');
       explodeImg.classList.add('active');
@@ -31,11 +34,14 @@ document.addEventListener("DOMContentLoaded", function() {
   function removeSpecialElements() {
     const smallFlame = document.querySelector('.small-flame');
     const explode = document.querySelector('.explode');
+    let text = document.querySelector('.textElement');
+
     
     if (smallFlame && explode) {
       smallFlame.classList.remove('active');
       explode.classList.remove('active');
-  
+      text.textContent = "Stunning Meets Exclusive";
+
       setTimeout(() => {
         smallFlame.remove();
         explode.remove();
