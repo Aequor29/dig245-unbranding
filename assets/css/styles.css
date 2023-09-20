@@ -1,2 +1,71 @@
 
 /* css */
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+.state {
+  width: 100%;
+  height: 100vh; 
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.bg-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; 
+  object-fit: cover; 
+}
+  
+.top-left-logo {
+  position: absolute;
+  top: 7%;  
+  left: 3%; 
+  width: 10%;
+  height: auto;  
+}
+  
+.explode {
+  position: absolute;
+  top: 11.9%;  
+  left: 18.6%; 
+  width: 62.8%;
+  height: auto; 
+}
+
+.small-flame {
+  position: absolute;
+  top: 4%;  
+  left: 0.6%;  
+  width: 16.7%;
+  height: auto; 
+}
+
+.textElement {
+  position: absolute;
+  text-align: center;
+  color: white;
+  font-size: 50px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  word-wrap: break-word;
+  top: 33%;  
+  left: 81%;
+}
+
+.small-flame, .explode {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.small-flame.active, .explode.active {
+  opacity: 1;
+}
+  
